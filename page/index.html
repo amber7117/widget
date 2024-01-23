@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>客服插件</title>
+        <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|Oxygen:700" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/whats.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+    </head>
+    <style>
+        * {
+            scrollbar-color: #414d58 none;
+            scrollbar-width: 5px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #414d58;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: none;
+        }
+    </style>
+
+    <body class="is-boxed has-animations">
+        <div class="body-wrap boxed-container">
+            <header class="site-header text-light">
+                <div class="container">
+                    <div class="site-header-inner">
+                        <div class="brand header-brand">
+                            <h1 class="m-0">
+                                <a href="#">
+                                    <img class="header-logo-image" src="media/logo.svg" alt="Logo">
+                                </a>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <section class="hero text-center text-light">
+                    <div class="hero-bg"></div>
+                    <div class="hero-particles-container">
+                        <canvas id="hero-particles"></canvas>
+                    </div>
+                    <div class="container-sm">
+                        <div class="hero-inner">
+                            <div class="hero-copy">
+                                <h1 class="hero-title mt-0">客服插件</h1>
+                                <p class="hero-paragraph">
+                                    制作的免费、可定制的工具，允许网站所有者在其网站上添加聊天功能。访客可以通过 Telegram 与网站所有者进行实时对话。这是网站与用户进行实时交流的一种简单方式。
+                                </p>
+                                <div class="hero-cta">
+                                    
+
+                                
+
+                                    <!-- 外部按钮 -->
+                                    <!--button class="mb-8 button button-primary button-wide-mobile" type="button" id="toggleChatButton">客服插件</button> -->
+                                </div>
+                            </div>
+                            <div class="mockup-container">
+                                <div class="mockup-bg">
+                                    <img src="media/iphone-hero-bg.svg" alt="illustration">
+                                </div>
+                                <img class="device-mockup" src="media/phone-hero.png" alt="Hero">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="features-extended section">
+                    <div class="features-extended-inner section-inner">
+                        <div class="features-extended-wrap">
+                            <div class="container">
+                                <div class="feature-extended">
+                                    <div class="feature-extended-image">
+                                        <div class="mockup-bg">
+                                            <img src="media/iphone-feature-bg-01.svg" alt="Feature 01 illustration">
+                                        </div>
+                                        <img class="device-mockup is-revealing" src="media/chat-box.png" alt="Feature 01">
+                                    </div>
+                                    <div class="feature-extended-body is-revealing">
+                                        <h3 class="mt-0 mb-16">特点</h3>
+                                        <p class="m-0">
+                                        <ul>
+                                            <li>适用于任何 MikroTik 热点门户</li>
+                                            <li>客户支持的便捷访问</li>
+                                            <li>实时聊天</li>
+                                            <li>即时支持和故障排除</li>
+                                            <li>指令!</li>
+                                        </ul>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="site-footer">
+                <div class="footer-particles-container">
+                    <canvas id="footer-particles"></canvas>
+                </div>
+                <div class="site-footer-bottom">
+                    <div class="container">
+                        <div class="site-footer-inner">
+                            <div class="footer-copyright">&copy; 2024 zznet, 版权所有
+                                <br>
+                                <a style="margin-left: 5px; font-weight: bold;" href="">
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <span class="chat-icon-media" style="font-size: 30px; color: rgb(255, 255, 255);"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" height="30" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"></path></svg></span>
+        </div>
+        	<div id="whatsappfixo" tooltip="Hi, how can i help you">
+        <span type="button" id="toggleChatButton" class="icone" >
+        <img class="icone-whatsapp" id="toggleChatButton" src="tele.svg" alt="Ícone do whatsapp">
+        </span>
+        
+		</div>
+        <script>
+            // 外部按钮的脚本
+            document.getElementById("toggleChatButton").addEventListener("click", () => {
+                document.dispatchEvent(new CustomEvent("chatToggled", { detail: true }))
+            });
+
+            // gc chat id
+            window.intergramId = "4194036598";
+
+            // 传递自定义数据
+            window.CustomData = {
+                'time&data ': new Date(),
+            };
+
+            window.intergramCustomizations = {
+                // 使用外部按钮切换聊天框
+                useExternalButton: true,
+
+                // 聊天打开时显示的标题
+                titleOpen: '联系客服！',
+
+                // 聊天关闭时的样式，选项：'button' 或 'chat'
+                closedStyle: 'chat',
+
+                // 聊天关闭时显示的头像 URL（仅在 closedStyle 设置为 'chat' 时使用）
+                closedChatAvatarUrl: '',
+
+                // 聊天 cookie 的过期时间（天）。一旦打开，关闭聊天的标题将显示为按钮。
+                // 这与 closedStyle 设置为 'chat' 时相关。
+                cookieExpiration: 1,
+
+                // 打开聊天时向用户显示的介绍信息
+                introMessage: '欢迎使用！',
+
+                // 自动帮助信息回复
+                helpMessage: '需要帮助？，我会尽力帮助您。',
+
+                // 当连接到管理员时向用户显示的自动回复信息
+                autoResponse: '正在寻找负责的开发者🧑‍🦯',
+
+                // 当没有管理员可用时向用户显示的自动无回应信息
+                autoNoResponse: '看起来开发者目前不在（可能还在休息🤔）',
+
+                // 在用户可以输入消息的输入字段中显示的占位符文本
+                placeholderText: '让我们聊天！',
+
+                // 是否为每条聊天消息显示时间戳
+                displayMessageTime: true,
+
+                // 是否在聊天窗口顶部显示横幅
+                displayBanner: true,
+
+                // 聊天小部件的主色调（例如，按钮、UI 元素）
+                mainColor: '#4234F8',
+
+                // 是否始终使用浮动按钮进行聊天，即使它是打开的
+                alwaysUseFloatingButton: true,
+
+                // 桌面设备上聊天窗口的高度
+                desktopHeight: 500,
+
+                // 桌面设备上聊天窗口的宽度
+                desktopWidth: 370,
+
+                // 是否启用易读的 ID，例如 "Guest:uh7k2z"
+                humanReadableIds: true
+            }
+        </script>
+	
+
+        <script type="text/javascript" src="js/widget.js"></script>
+
+        <script src="js/main.min.js"></script>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-95RWFLRY7X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-95RWFLRY7X');
+</script>
+	
+	
+</body>
+
+</html>
